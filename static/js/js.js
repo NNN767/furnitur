@@ -3,10 +3,19 @@
 var divan_container_name = document.getElementById('divan_container');
 
 ;(() => {
-  divan_container_name.addEventListener('scroll', checkPosition)
-  divan_container_name.addEventListener('resize', checkPosition)
+  divan_container_name.addEventListener('scroll',throttle(checkPosition,250))
+  divan_container_name.addEventListener('resize', throttle(checkPosition,250))
 })()
 
+
+
+
+
+function GetDivan_container(){
+    var divan_container = document.getElementById('divan_container').getBoundingClientRect() // получение divan_container статичный элемент
+    var divan_container_bottom = divan_container.bottom
+    return divan_container_bottom
+}
 
 
 
@@ -38,8 +47,9 @@ function GetHeight_el(divan,lench){
 
 
 function checkPosition(){
-    var divan_container = document.getElementById('divan_container').getBoundingClientRect() // получение divan_container статичный элемент
-    var divan_container_bottom = divan_container.bottom
+
+    var divan_container_bottom = GetDivan_container()
+
     var divan = gettAllDivans()
     var lench = getLenchDivans(divan)
     var height_el =GetHeight_el(divan,lench)
@@ -59,18 +69,54 @@ function checkPosition(){
 
 
 
+function throttle(callee, timeout) {
+  let timer = null
 
-var divan = gettAllDivans()
-var lench = getLenchDivans(divan)
-var height_el =GetHeight_el(divan,lench)
+  return function perform(...args) {
+    if (timer) return
 
-console.log(height_el)
+    timer = setTimeout(() => {
+      callee(...args)
+
+      clearTimeout(timer)
+      timer = null
+    }, timeout)
+  }
+}
 
 
 
 
+fetch('date/', {
+    headers:{
+        'Accept': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest', //Necessary to work with request.is_ajax()
+    },
+})
+.then(response => {
+    return response.json() //Convert response to JSON
+})
+.then(data => {
+    console.log(data)
+})
+
+function test(){
+fetch('date/', {
+    headers:{
+        'Accept': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest', //Necessary to work with request.is_ajax()
+    },
+})
+.then(response => {
+    return response.json() //Convert response to JSON
+})
+.then(data => {
+
+})
 
 
+}
+test()
 
 
 

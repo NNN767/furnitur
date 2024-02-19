@@ -111,6 +111,7 @@ body{
     background-repeat: no-repeat ;
     background-size: cover ;
     overflow-y: auto ;
+    border-radius: 4vw;
 
 }
 .object_div::-webkit-scrollbar{
