@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+
+}
+
+
+
+.text{
+    color: white;
+}
+
+.main_block{
+    display: flex;
+    margin: auto ;
+    justify-content: space-around;
+    margin: 1.5vw 1.5vw 0 1.5vw;
+}
+
+
+
+
+.headers{
+    
+    width: 95vw; 
+    height: 100px;   
+    background-color: black;
+    margin: auto ;
+    border-radius: 1vw;
+}
+.widget_scrol_name{
+    width: 15vw;
+    height: 3vw;
+    margin: 0 0 1vw 0;
+    background-color: black;
+    border-radius: 1vw;
+    display: flex;
+}
+
+.one_block{
+    display: flex;
+    flex-direction: column;
+
+    width: 15vw;
+    height: 39vw;
+
+    border-radius: 1vw;
+}
+.objects_scrol_main{
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.object_scrol_distanse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3vw;
+
+}
+
+
+.object_scrol1{
+    width: 25vw;
+    
+    
+
+    
+}
+.object_scrol2{
+    
+    
+    width: 25vw;
+    height: 44px;
+    
+}
+
+.object_scrol3{
+    
+    
+    width: 25vw;
+    height: 44px;
+    
+}
+
+.object_scrol4{
+    
+    
+    width: 25vw;
+    height: 44px;
+    
+}
+
+
+.object{
+    background-color: black;
+    border-radius: 0.5vw;
+
+    margin: 0.3vw;
+    display: flex;
+}
+
+
+.object_div{
+    height: 36vw;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url(img/picture-frame-by-a-velvet-armchair.jpg);
+    background-repeat: no-repeat ;
+    background-size: cover ;
+    overflow-y: auto ;
+
+}
+.object_div::-webkit-scrollbar{
+    display: none;
+}
+
+
+.two_block{
+    width: 80vw;
+    height: 43vw;
+    background-color: black;
+    display: flex;
+    border-radius: 1vw;
+    justify-content: center;
+
+}
+
+
+img{
+    width: 100%;
+}
+
+.hi{
+    position: absolute;
+    display: flex;
+    margin: 3vw 0 0 0;
+    font-size: large;
+    
+}
+
+
+
+
+:hover.object{
+    
+    background-color: black;
+    z-index: 1;
+    opacity: 0.4;
+    color: white;
+}
+.bacgraund{
+    background-image: url(img/кухня.jpg);
+    margin: 1vw;
+    border-radius: 1vw;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    width: 100vw;
+}

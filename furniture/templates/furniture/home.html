@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
+</head>
+<body>
+
+
+
+    <!--Это headers блок-->
+
+    <div class="headers">
+
+    </div>
+
+    <!--Это главный блок-->
+    <div class="main_block">
+
+        <div class="div_block_one">
+            <!--Внутри этого блока будут находиться названия ввыбора горизантали -->
+            <div class="widget_scrol_name">
+                <img src="img/search_wya4tjowyd2b.svg" alt="" style="width: auto;">
+                <text class="text">поиск</text>
+            </div>
+
+        <!--Это первый блок-->
+        <div class="one_block">
+            <!--Внутри этого блока будут находиться объекты ввыбора горизантали-->
+            <div class="objects_scrol_main">
+                <div class="object_scrol1"> <img src="img/furniture_ol36m8ers4q0.svg" alt="furniture_ol36m8ers4q0.svg" srcset=""></div>
+                <div class="object_scrol2"> <img src="img/furniture_gqmcjni3et6i.svg" alt=""></div>
+                <div class="object_scrol3"><img src="img/furniture_bpgazuizmqdq.svg" alt=""></div>
+                <div class="object_scrol4"><img src="img/furniture_f95ks3zo0gf4.svg" alt=""></div>
+
+            </div>
+
+            <!--Внутри этого блока будут находиться объекты ввыбора вертикали-->
+            <div class="object_div" name="divan_container_name" id="divan_container">
+                {% for i in divan %}
+                <div id="6" name="divan" class="object" style=""><img src="/media/{{ i.image }}" ></div>
+                {% endfor %}
+            </div>
+        </div>
+        </div>
+
+        <!--Это второй блок-->
+        <div class="two_block">
+            <div id="7" class="bacgraund"></div>
+        </div>
+    </div>
+
+
+    <script src="{% static 'js/js.js' %}"></script>
+
+
+
+</body>
+</html>
