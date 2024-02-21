@@ -1,6 +1,6 @@
 
 
-NotMedia = '/media/'
+let NotMedia = '/media/'
 
 var divan_container_name = document.getElementById('divan_container');
 
@@ -64,8 +64,8 @@ function checkPosition(){
 
 
         test(counter_start,counter_end)
-        counter_end += 1
-        counter_start += 1
+        counter_end += 3
+        counter_start += 3
 
 
     }
@@ -107,18 +107,20 @@ fetch(start_id+'/'+end_id+'/', {
     return response.json() //Convert response to JSON
 })
 .then(data => {
-    console.log(data)
-    for (let i = 0; i < 3; i++) {
-        var newElement = '<div id="6" name="divan" class="object" style="" id="divan"><img src="/media/asdasd}" ></div>'
+    var length= data.length
+    if (length > 0){
         const template = document.getElementById('divan_container')
-        template.insertAdjacentHTML( 'beforeend', newElement )
-
+        for (let i = 0; i < length; i++) {
+        var date = data[i]['image']
+        var clone = document.getElementById('6')
+        var new_clone = clone.cloneNode(true);
+        new_clone.querySelector('img').src =NotMedia+date
+        template.append(new_clone)
+    }
 
     }
 
-
 })
-
 
 }
 
