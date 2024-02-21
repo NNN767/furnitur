@@ -1,5 +1,7 @@
 
 
+NotMedia = '/media/'
+
 var divan_container_name = document.getElementById('divan_container');
 
 ;(() => {
@@ -43,7 +45,8 @@ function GetHeight_el(divan,lench){
 }
 
 
-
+let counter_start = 4
+let counter_end = 7
 
 
 function checkPosition(){
@@ -55,15 +58,21 @@ function checkPosition(){
     var height_el =GetHeight_el(divan,lench)
 
     var height_container = divan_container_bottom
+
     if(height_el < height_container){
-        console.log('true')         // добовляет элемент следует получить новый список элементов
+        console.log('true')
+
+
+        test(counter_start,counter_end)
+        counter_end += 1
+        counter_start += 1
+
 
     }
     if(height_el > height_container){
-        console.log('false')         // добовляет элемент следует получить новый список элементов
+        console.log('false')
 
     }
-
 
 }
 
@@ -87,7 +96,8 @@ function throttle(callee, timeout) {
 
 
 
-fetch('date/', {
+function test(start_id,end_id){
+fetch(start_id+'/'+end_id+'/', {
     headers:{
         'Accept': 'application/json',
         'X-Requested-With': 'XMLHttpRequest', //Necessary to work with request.is_ajax()
@@ -98,28 +108,21 @@ fetch('date/', {
 })
 .then(data => {
     console.log(data)
-})
+    for (let i = 0; i < 3; i++) {
+        var newElement = '<div id="6" name="divan" class="object" style="" id="divan"><img src="/media/asdasd}" ></div>'
+        const template = document.getElementById('divan_container')
+        template.insertAdjacentHTML( 'beforeend', newElement )
 
-function test(){
-fetch('date/', {
-    headers:{
-        'Accept': 'application/json',
-        'X-Requested-With': 'XMLHttpRequest', //Necessary to work with request.is_ajax()
-    },
-})
-.then(response => {
-    return response.json() //Convert response to JSON
-})
-.then(data => {
+
+    }
+
 
 })
 
 
 }
-test()
 
 
 
 
-
-
+console.log(divan_container_name)

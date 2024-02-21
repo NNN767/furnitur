@@ -21,8 +21,8 @@ def detail(request,furniture_id):
     return render(request,'furniture/detail.html',{'test_bd':test_bd})
 
 
-def ajax_get_view(request):
-    divan = modelDivan.objects.all().values()
+def ajax_get_view(request,start_id,end_id):
+    divan = modelDivan.objects.order_by()[start_id:end_id].values()
 
 
 

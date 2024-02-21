@@ -10,9 +10,8 @@ app_name = 'furniture'
 urlpatterns =[
 
     path('', views.home, name ='home' ),
-    path('<int:furniture_id>/', views.detail, name = 'detail' ),
-    path('date/', views.ajax_get_view,  ),
 
+    path('<int:start_id>/<int:end_id>/', views.ajax_get_view, name = 'ajax_get_view'  ),
 
 
 ]
