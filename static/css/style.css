@@ -13,7 +13,7 @@ body{
     display: flex;
     margin: auto ;
     justify-content: space-around;
-    margin: 1.5vw 1.5vw 0 1.5vw;
+    margin: 0 1.5vw 0 1.5vw;
 }
 
 
@@ -40,7 +40,7 @@ body{
     display: flex;
     flex-direction: column;
 
-    width: 15vw;
+    width: 19vw;
     height: 39vw;
 
     border-radius: 1vw;
@@ -103,7 +103,7 @@ body{
 
 
 .object_div{
-    height: 36vw;
+    height: 40vw;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -121,7 +121,7 @@ body{
 
 .two_block{
     width: 80vw;
-    height: 43vw;
+    height: 40vw;
     background-color: black;
     display: flex;
     border-radius: 1vw;
@@ -130,7 +130,7 @@ body{
 }
 
 
-img{
+.img_scroll{
     width: 100%;
 }
 
@@ -153,11 +153,62 @@ img{
     color: white;
 }
 .bacgraund{
-    background-image: url(img/кухня.jpg);
-    margin: 1vw;
-    border-radius: 1vw;
-    background-repeat: no-repeat;
-    background-size: cover ;
-    width: 100vw;
+    display: flex;
+
+
 }
 
+
+
+
+.categories{
+    width: 95vw;
+    height: 3vw;
+    background-color: bisque;
+    border-radius: 1vw;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+.categories_content{
+    display: flex;
+
+
+
+
+}
+
+.categories_item{
+
+    background-color: black;
+    border-radius: 40px;
+    margin: 1vw;
+
+}
+.text{
+    font-size: 1.75vw;
+    color: white;
+    margin: 0.2vw;
+}
+.button_class{
+    border-radius: 0px;
+    border: 0px;
+    padding: 0px
+
+}
+.img_foto{
+    width: 50vw;
+}
+
+.text_box{
+    display: flex;
+    width: 20vw;
+    flex-direction: column;
+}
+.img_container{
+
+}
+.text{
+    
+}

@@ -1,0 +1,36 @@
+ 
+var divan = document.getElementsByName("divan"); получает список из объектов
+var divan_container document.getElementById('divan_container'); получает один объект если объектов много, то первого попавшего
+
+element.getBoundingClientRect(); взврощает высоту обекта
+
+cloneNode(true); позволяет копировать обект как шаблон, параметр true копирует всё содиржимое, false  копирут только обект
+
+element.querySelector('img').src  позволяет обрашаться к атрибутам
+
+
+element.append(name_object)  вставляет  конец
+
+fetch(url, {
+    headers:{
+        'Accept': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest', //Necessary to work with request.is_ajax()
+    },
+})
+.then(response => {
+    return response.json() //Convert response to JSON
+})
+.then(data => {
+
+
+    }
+
+    }
+})
+}
+
+
+;(() => {
+  divan_container_name.addEventListener('scroll',throttle(checkPosition,250))
+  divan_container_name.addEventListener('resize', throttle(checkPosition,250))
+})() оброботчик события

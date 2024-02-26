@@ -20,13 +20,10 @@ function GetDivan_container(){
 }
 
 
-
 function gettAllDivans(){                           // возвращает список диванов
     var divan = document.getElementsByName("divan");
     return divan;
-
 }
-
 
 
 function getLenchDivans(divans){
@@ -35,14 +32,15 @@ function getLenchDivans(divans){
     return lench_divans;
 }
 
-
 function GetHeight_el(divan,lench){
     var el = divan
     var lench_el = lench
     var result = el[lench_el].getBoundingClientRect()
     return result.bottom
-
 }
+
+
+
 
 
 let counter_start = 4
@@ -52,28 +50,19 @@ let counter_end = 7
 function checkPosition(){
 
     var divan_container_bottom = GetDivan_container()
-
     var divan = gettAllDivans()
     var lench = getLenchDivans(divan)
     var height_el =GetHeight_el(divan,lench)
-
     var height_container = divan_container_bottom
-
     if(height_el < height_container){
         console.log('true')
-
-
         test(counter_start,counter_end)
         counter_end += 3
         counter_start += 3
-
-
     }
     if(height_el > height_container){
         console.log('false')
-
     }
-
 }
 
 
@@ -95,7 +84,6 @@ function throttle(callee, timeout) {
 
 
 
-
 function test(start_id,end_id){
 fetch(start_id+'/'+end_id+'/', {
     headers:{
@@ -112,9 +100,10 @@ fetch(start_id+'/'+end_id+'/', {
         const template = document.getElementById('divan_container')
         for (let i = 0; i < length; i++) {
         var date = data[i]['image']
-        var clone = document.getElementById('6')
+        var clone = document.getElementById('divan')
         var new_clone = clone.cloneNode(true);
         new_clone.querySelector('img').src =NotMedia+date
+
         template.append(new_clone)
     }
 
@@ -127,4 +116,24 @@ fetch(start_id+'/'+end_id+'/', {
 
 
 
-console.log(divan_container_name)
+
+var divan = document.getElementsByName('divan')
+lench = divan.length
+
+for (let i = 0; i < lench; i++){
+    divan[i].addEventListener('click', myFunction)
+}
+
+
+let divan_foto = document.getElementById('divan_foto_container')
+let img_foto = document.getElementById('img_foto')
+function myFunction(e) {
+    var new_foto = e.target.cloneNode(true)
+    img_foto.src = new_foto.getAttribute('src')
+
+
+
+}
+
+
+
