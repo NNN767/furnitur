@@ -16,17 +16,10 @@
     <!--Это headers блок-->
 
     <div class="headers">
+        <div class="vi">Vi</div>
 
     </div>
-    <div class="categories">
-        <div class="categories_content">
-            <div class="categories_item"> <div class="text"> Диван </div> </div>
-            <div class="categories_item"><div class="text"> Кровати </div> </div>
-            <div class="categories_item"><div class="text"> Шкафы </div> </div>
-            <div class="categories_item"><div class="text"> Мебель </div> </div>
-            <div class="categories_item"><div class="text"> Диван </div> </div>
-        </div>
-    </div>
+
 
 
 
@@ -42,10 +35,18 @@
 
             <!--Внутри этого блока будут находиться объекты ввыбора вертикали-->
             <div class="object_div" name="divan_container_name" id="divan_container">
-                {% for i in divan %}
+                <div class="category_main">
+                    <div class="category_main_item">
+                        <div class="text_category"> <                > </div>
+                        <div class="text_category">Диваны</div>
+                        <div class="text_category">Кухни</div>
+                        <div class="text_category">Матрасы</div>
+                        <div class="text_category">Наволчки</div>
+                        <div class="text_category">фонтаны</div>
+                        <div class="text_category">бананы</div>
+                    </div>
 
-                <div name="divan" class="object" style="" id="divan"><img class="img_scroll" src="/media/{{ i.image }}" ></div>
-                {% endfor %}
+                </div>
             </div>
         </div>
         </div>
@@ -53,15 +54,6 @@
         <!--Это второй блок-->
         <div class="two_block">
             <div id="divan_foto_container" class="bacgraund">
-                <div class="text_box">
-                    <div class="text">цвет: жёлтый</div>
-                    <div class="text">вес: 15 кг</div>
-                    <div class="text">ширина: 300см</div>
-                    <div class="text">высота: 500см</div>
-                    <div class="text">Внутренний наполнитель: синтепух; спанбонд</div>
-                    <div class="text">Стирка: машинная; ручная</div>
-                </div>
-                <div class="img_container"><img id="img_foto" class="img_foto" src=""></div>
 
             </div>
         </div>

@@ -24,6 +24,4 @@ def detail(request,furniture_id):
 def ajax_get_view(request,start_id,end_id):
     divan = modelDivan.objects.order_by()[start_id:end_id].values()
 
-
-
     return JsonResponse(list(divan), safe=False)
