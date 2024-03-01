@@ -1,12 +1,16 @@
+
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap')
+</style>
+
+
+
 body{
     margin: 0;
 
-}
-
-
-
-.text{
-    color: white;
 }
 
 .main_block{
@@ -15,9 +19,6 @@ body{
     justify-content: space-around;
     margin: 0 1.5vw 0 1.5vw;
 }
-
-
-
 
 .headers{
     
@@ -28,14 +29,7 @@ body{
     margin: auto ;
     border-radius: 1vw;
 }
-.widget_scrol_name{
-    width: 15vw;
-    height: 3vw;
-    margin: 0 0 1vw 0;
-    background-color: black;
-    border-radius: 1vw;
-    display: flex;
-}
+
 
 .one_block{
     display: flex;
@@ -46,62 +40,6 @@ body{
 
     border-radius: 1vw;
 }
-.objects_scrol_main{
-    display: flex;
-    justify-content: center;
-    
-
-}
-
-.object_scrol_distanse{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 3vw;
-
-}
-
-
-.object_scrol1{
-    width: 25vw;
-    
-    
-
-    
-}
-.object_scrol2{
-    
-    
-    width: 25vw;
-    height: 44px;
-    
-}
-
-.object_scrol3{
-    
-    
-    width: 25vw;
-    height: 44px;
-    
-}
-
-.object_scrol4{
-    
-    
-    width: 25vw;
-    height: 44px;
-    
-}
-
-
-.object{
-    background-color: black;
-    border-radius: 0.5vw;
-
-    margin: 0.3vw;
-    display: flex;
-}
-
 
 .object_div{
     height: 40vw;
@@ -119,113 +57,33 @@ body{
     display: none;
 }
 
-
 .two_block{
     width: 80vw;
-    height: 40vw;
-    background-color: black;
+
     display: flex;
     border-radius: 1vw;
-    justify-content: center;
-
-    box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.5);
-
-
-}
-
-
-.img_scroll{
-    width: 100%;
-}
-
-.hi{
-    position: absolute;
-    display: flex;
-    margin: 3vw 0 0 0;
-    font-size: large;
-    
-}
-
-
-
-
-:hover.object{
-    
-    background-color: black;
-    z-index: 1;
-    opacity: 0.4;
-    color: white;
-}
-.bacgraund{
-    display: flex;
-    width: 100vw;
-    background-color: aliceblue;
-    opacity: 0.8;
-    margin: 0.2vw;
-    border-radius: 1vw;
-
-
-}
-
-
-
-
-.categories{
-    width: 95vw;
-    height: 3vw;
-
-    border-radius: 1vw;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-}
-.categories_content{
-    display: flex;
-
-
-
-
-}
-
-.categories_item{
-
-    background-color: black;
-    border-radius: 5px;
-    margin: 1vw;
-
-}
-.text{
-    font-size: 1.75vw;
-    color: white;
-    margin: 0.2vw;
-}
-.button_class{
-    border-radius: 0px;
-    border: 0px;
-    padding: 0px
-
-}
-.img_foto{
-    width: 50vw;
-}
-
-.text_box{
-    display: flex;
-    width: 20vw;
+    box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.1);
     flex-direction: column;
-}
-.img_container{
 
 }
+
+
+.item_buy{
+    width: 75vw;
+    height: 35vw;
+    background: #cbf0f8;
+    border-radius: 15px;
+    margin: 1vw;
+    display: flex;
+}
+
+
 .vi{
     font-size: 10vw;
     border-bottom: 2px solid maroon;
     margin: 0 0 1vw 0;
 }
-.category_main{
 
-}
 .category_main_item{
     width: auto;
     height: 40vw;
@@ -233,19 +91,28 @@ body{
     box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.192);
     display: flex;
     align-items: center;
-
     justify-content: flex-start;
     flex-direction: column;
 
 
 }
 
-
 .text_category{
     margin: 0.5 vw;
     font-size: 1.2vw;
+}
+
+.description_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.description_item{
+    font-family: "Open Sans";
 
 }
-.item{
+
+.img_divan{
+    width:1000px;
 
 }

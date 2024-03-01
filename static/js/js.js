@@ -131,9 +131,72 @@ function myFunction(e) {
     var new_foto = e.target.cloneNode(true)
     img_foto.src = new_foto.getAttribute('src')
 
+}
 
+
+
+// new cod \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+
+
+var two_block = document.getElementById('two_block') // нужен для очистки этого элемента
+var item_buy_id = document.getElementById('item_buy_id') // шаблон для товаров
+var clone = item_buy_id.cloneNode(true)  // clone item_buy_id
+
+
+function GetDivans_Fetch(start_id,end_id,name){
+fetch(start_id+'/'+end_id+'/'+name+'/', {
+    headers:{
+        'Accept': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest', //Necessary to work with request.is_ajax()
+    },
+})
+.then(response => {
+    return response.json() //Convert response to JSON
+})
+.then(data => {
+    var length= data.length
+    if (length > 0){
+
+        for (let i = 0; i < length; i++) {
+            var date = data[i]['image']
+            console.log(date)
+            console.log(clone)
+            document.getElementById('two_block').appendChild(clone);
+            }
+        }
+})
 
 }
 
 
 
+
+
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
+function challenge(e){
+    removeAllChildNodes(two_block)
+    name = e.id
+    GetDivans_Fetch(0,5,name)
+
+}
+
+
+function test_app(){
+    for (let i = 0; i < 10; i++){
+
+        two_block.append(item_buy_id)
+        console.log(item_buy_id)
+        document.getElementById('two_block').appendChild(clone);
+
+    }
+}
+test_app()

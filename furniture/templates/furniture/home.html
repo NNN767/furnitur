@@ -38,7 +38,7 @@
                 <div class="category_main">
                     <div class="category_main_item">
                         <div class="text_category"> <                > </div>
-                        <div class="text_category">Диваны</div>
+                        <div id="divan" class="text_category" onclick="challenge(this)">диваны</div>
                         <div class="text_category">Кухни</div>
                         <div class="text_category">Матрасы</div>
                         <div class="text_category">Наволчки</div>
@@ -52,10 +52,20 @@
         </div>
 
         <!--Это второй блок-->
-        <div class="two_block">
-            <div id="divan_foto_container" class="bacgraund">
-
+        <div class="two_block" id="two_block">
+            {% for i in divan %}
+            <div class="item_buy" id="item_buy_id" name="item_buy_name">
+                <img class="img_divan" src="media/{{ i.image }}">
+                <div class="description_container">
+                    <div class="description_item">Коллекция Ника</div>
+                    <div class="description_item">страна Китай</div>
+                    <div class="description_item">Ширина 105 см</div>
+                    <div class="description_item">высота 205 см</div>
+                    <div class="description_item">Вращающийся стул с подлокотниками вынесет уровень комфорта за обеденным столом на новый уровень. Мягкое сиденье и спинка, плавно переходящая в подлокотники,</div>
+                </div>
             </div>
+            {% endfor %}
+
         </div>
     </div>
 
