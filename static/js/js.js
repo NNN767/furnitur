@@ -143,6 +143,7 @@ function myFunction(e) {
 
 const two_block = document.getElementById('two_block') // нужен для очистки этого элемента
 var item_buy_id = document.getElementById('item_buy_id') // шаблон для товаров
+var item_buy_name = document.getElementsByName('item_buy_name')
 
 
 
@@ -189,8 +190,36 @@ function challenge(e){
     removeAllChildNodes(two_block)
     name = e.id
     GetDivans_Fetch(0,3,name)
+    item_buy_id.querySelector('img').id = e.id
 }
 
 
 
 
+function GetLastHeightEl(){
+    var length = (item_buy_name.length)
+    var bottom = item_buy_name[length-1].getBoundingClientRect()
+    var screenHeight = window.innerHeight
+    return bottom.bottom
+
+}
+
+
+let count = 1
+function checkPositions(){
+    var HeightEl = GetLastHeightEl()
+    var screenHeight = window.innerHeight
+    var name = item_buy_id.querySelector('img').id
+    if (HeightEl < screenHeight) {
+        GetDivans_Fetch(count,count+1,name)
+        count+=1
+        console.log('True')
+    }
+
+
+}
+
+;(() => {
+  window.addEventListener('scroll', throttle(checkPositions, 250))
+  window.addEventListener('resize', throttle(checkPositions, 250))
+})()
