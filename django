@@ -1,10 +1,8 @@
 
 
+версия 5.10 ()
 
 
-
-{% load static %} загружает в html доступ static папку
-{% static 'img/person.jpg' %} ссылка
 
 
 django состоит
@@ -41,7 +39,7 @@ python3 manage.py makemigrations проверить все изменения з
 python3 manage.py createsuperuser создаёт юзер
 
 
-<a href="{% url 'blog:detail' i.id %}"></a>  при нажатие на ссылку перенаправляет в blog(имя приложения) , и i.id передаёт параметр
+<a href="{% url 'blog:detail' i.id %}"></a>  при нажатие на ссылку перенаправляет в blog(имя приложения) , и
 
 path('<int:blog_id>/', views.detail, name = 'detail' ), <int:blog_id>/ принемает переменную
 
@@ -84,49 +82,25 @@ Admin что это: у каждого приложения внутри про�
 
 9.from portfolio.models import Project добавил класс во views
 10. {% for b in test %}  внутри цикла поместил данные переменные  {% endfor %}
-11.STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, "static"),
-]
 
 
 
 
 
- 
-var divan = document.getElementsByName("divan"); получает список из объектов
-var divan_container document.getElementById('divan_container'); получает один объект если объектов много, то первого попавшего
-
-element.getBoundingClientRect(); взврощает высоту обекта
-
-cloneNode(true); позволяет копировать обект как шаблон, параметр true копирует всё содиржимое, false  копирут только обект
-
-element.querySelector('img').src  позволяет обрашаться к атрибутам
 
 
-element.append(name_object)  вставляет  конец
-
-fetch(url, {
-    headers:{
-        'Accept': 'application/json',
-        'X-Requested-With': 'XMLHttpRequest', //Necessary to work with request.is_ajax()
-    },
-})
-.then(response => {
-    return response.json() //Convert response to JSON
-})
-.then(data => {
 
 
-    }
-
-    }
-})
-}
 
 
-;(() => {
-  divan_container_name.addEventListener('scroll',throttle(checkPosition,250))
-  divan_container_name.addEventListener('resize', throttle(checkPosition,250))
-})() оброботчик события
+
+
+
+
+
+
+
+
+
+
+
